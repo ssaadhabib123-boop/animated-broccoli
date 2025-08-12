@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HeartQuest: Saad ❤️ Shaziya</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #ffe6f0; color: #333; text-align: center; padding: 20px; }
+  h1 { color: #d6336c; }
+  .btn { background: #ff4d88; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+  .btn:hover { background: #e6005c; }
+  .story { display: none; margin-top: 20px; font-size: 18px; }
+</style>
+</head>
+<body>
+<h1>💖 HeartQuest 💖</h1>
+<p>Welcome, Shaziya... your journey begins now.</p>
+<button class="btn" onclick="startGame()">Start</button>
+
+<div id="part1" class="story">
+  <p>You walk through a dreamy garden, petals falling like confetti...</p>
+  <button class="btn" onclick="nextPart(2)">Continue</button>
+</div>
+
+<div id="part2" class="story">
+  <p>Suddenly, you see Saad waiting for you with a smile, holding a small box...</p>
+  <button class="btn" onclick="nextPart(3)">Open the box</button>
+</div>
+
+<div id="part3" class="story">
+  <p>Inside, there's a heart-shaped note that says:<br><b>"I still remember the day you proposed me"</b></p>
+  <button class="btn" onclick="nextPart(4)">Continue</button>
+</div>
+
+<div id="part4" class="story">
+  <p>Saad kneels down and says:<br><b>"Shaziya, my love, will you be my forever?"</b></p>
+  <h2>💍 YES 💍</h2>
+</div>
+
+<script>
+function startGame() {
+  document.querySelector("button").style.display = "none";
+  document.getElementById("part1").style.display = "block";
+}
+function nextPart(num) {
+  document.querySelectorAll(".story").forEach(s => s.style.display = "none");
+  document.getElementById("part" + num).style.display = "block";
+}
+</script>
+
+</body>
+</html>
